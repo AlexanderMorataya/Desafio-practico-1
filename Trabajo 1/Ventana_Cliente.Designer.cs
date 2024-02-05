@@ -166,6 +166,7 @@
             this.BtnModificarCliente.TabIndex = 11;
             this.BtnModificarCliente.Text = "Modificar";
             this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnConfirmarCliente
             // 
@@ -180,6 +181,7 @@
             this.BtnConfirmarCliente.TabIndex = 10;
             this.BtnConfirmarCliente.Text = "Confirmar informacion";
             this.BtnConfirmarCliente.UseVisualStyleBackColor = false;
+            this.BtnConfirmarCliente.Click += new System.EventHandler(this.BtnConfirmarCliente_Click);
             // 
             // label3
             // 
@@ -206,6 +208,8 @@
             this.Name = "Ventana_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana_Cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ventana_Cliente_FormClosed);
+            this.Load += new System.EventHandler(this.Ventana_Cliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

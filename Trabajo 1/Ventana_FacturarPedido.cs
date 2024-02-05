@@ -16,5 +16,21 @@ namespace Trabajo_1
         {
             InitializeComponent();
         }
+        private void Ventana_FacturarPedido_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 ventanaPrincipal = new Form1();
+            ventanaPrincipal.Show();
+            this.Dispose();
+        }
+
+        private void BtnEliminarPedido_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnCompletarPedido_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

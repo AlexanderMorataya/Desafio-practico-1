@@ -66,6 +66,7 @@
             this.BtnCompletarPedido.TabIndex = 37;
             this.BtnCompletarPedido.Text = "Completar pedido";
             this.BtnCompletarPedido.UseVisualStyleBackColor = false;
+            this.BtnCompletarPedido.Click += new System.EventHandler(this.BtnCompletarPedido_Click);
             // 
             // BtnEliminarPedido
             // 
@@ -79,6 +80,7 @@
             this.BtnEliminarPedido.TabIndex = 36;
             this.BtnEliminarPedido.Text = "Eliminar pedido";
             this.BtnEliminarPedido.UseVisualStyleBackColor = false;
+            this.BtnEliminarPedido.Click += new System.EventHandler(this.BtnEliminarPedido_Click);
             // 
             // panel3
             // 
@@ -297,6 +299,7 @@
             this.Name = "Ventana_FacturarPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturar pedido";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ventana_FacturarPedido_FormClosed);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductosOrdenados)).EndInit();
