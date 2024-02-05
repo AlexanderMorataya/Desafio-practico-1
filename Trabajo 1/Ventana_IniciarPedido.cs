@@ -16,5 +16,26 @@ namespace Trabajo_1
         {
             InitializeComponent();
         }
+
+        private void Ventana_IniciarPedido_FormClosed(object sender, FormClosedEventArgs e)
+        {            
+            Form1 ventanaPrincipal = new Form1();
+            ventanaPrincipal.Show();
+            this.Dispose();
+        }
+
+        private void BtnCodigoCliente_Click(object sender, EventArgs e)
+        {
+            Ventana_Cliente buscarCliente = new Ventana_Cliente(1);
+            buscarCliente.Show();
+            this.Dispose();
+        }
+
+        private void BtnCrearCliente_Click(object sender, EventArgs e)
+        {
+            Ventana_EditarCliente crearCliente = new Ventana_EditarCliente(1);
+            crearCliente.Show();
+            this.Dispose();
+        }
     }
 }

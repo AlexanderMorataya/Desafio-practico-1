@@ -56,6 +56,7 @@
             this.BtnCodigoCliente.TabIndex = 3;
             this.BtnCodigoCliente.Text = "Ingresar codigo cliente";
             this.BtnCodigoCliente.UseVisualStyleBackColor = false;
+            this.BtnCodigoCliente.Click += new System.EventHandler(this.BtnCodigoCliente_Click);
             // 
             // BtnCrearCliente
             // 
@@ -69,6 +70,7 @@
             this.BtnCrearCliente.TabIndex = 4;
             this.BtnCrearCliente.Text = "Crear cliente";
             this.BtnCrearCliente.UseVisualStyleBackColor = false;
+            this.BtnCrearCliente.Click += new System.EventHandler(this.BtnCrearCliente_Click);
             // 
             // label3
             // 
@@ -94,6 +96,7 @@
             this.Name = "Ventana_IniciarPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Realizar pedido";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ventana_IniciarPedido_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

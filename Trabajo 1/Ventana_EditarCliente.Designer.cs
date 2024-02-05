@@ -56,6 +56,7 @@
             this.BtnGuardarCambios.TabIndex = 8;
             this.BtnGuardarCambios.Text = "Guardar cliente";
             this.BtnGuardarCambios.UseVisualStyleBackColor = false;
+            this.BtnGuardarCambios.Click += new System.EventHandler(this.BtnGuardarCambios_Click);
             // 
             // TxtNombreCliente
             // 
@@ -179,6 +180,7 @@
             this.BtnEliminarCliente.TabIndex = 22;
             this.BtnEliminarCliente.Text = "Eliminar cliente";
             this.BtnEliminarCliente.UseVisualStyleBackColor = false;
+            this.BtnEliminarCliente.Click += new System.EventHandler(this.BtnEliminarCliente_Click);
             // 
             // label7
             // 
@@ -214,6 +216,8 @@
             this.Name = "Ventana_EditarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ventana_EditarCliente_FormClosed);
+            this.Load += new System.EventHandler(this.Ventana_EditarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

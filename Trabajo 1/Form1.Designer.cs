@@ -71,6 +71,7 @@
             this.BtnRealizarPedido.TabIndex = 2;
             this.BtnRealizarPedido.Text = "Realizar pedido";
             this.BtnRealizarPedido.UseVisualStyleBackColor = false;
+            this.BtnRealizarPedido.Click += new System.EventHandler(this.BtnRealizarPedido_Click);
             // 
             // BtnCrearCliente
             // 
@@ -84,6 +85,7 @@
             this.BtnCrearCliente.TabIndex = 3;
             this.BtnCrearCliente.Text = "Crear cliente";
             this.BtnCrearCliente.UseVisualStyleBackColor = false;
+            this.BtnCrearCliente.Click += new System.EventHandler(this.BtnCrearCliente_Click);
             // 
             // BtnModificarCliente
             // 
@@ -97,6 +99,7 @@
             this.BtnModificarCliente.TabIndex = 4;
             this.BtnModificarCliente.Text = "Modificar cliente";
             this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnFacturarPedido
             // 
@@ -110,6 +113,7 @@
             this.BtnFacturarPedido.TabIndex = 5;
             this.BtnFacturarPedido.Text = "Facturar pedido";
             this.BtnFacturarPedido.UseVisualStyleBackColor = false;
+            this.BtnFacturarPedido.Click += new System.EventHandler(this.BtnFacturarPedido_Click);
             // 
             // DgvInformacionPedidos
             // 
@@ -148,6 +152,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda de computadoras";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvInformacionPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
