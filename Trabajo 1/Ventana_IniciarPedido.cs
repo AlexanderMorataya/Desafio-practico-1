@@ -12,30 +12,33 @@ namespace Trabajo_1
 {
     public partial class Ventana_IniciarPedido : Form
     {
+        //PROGRAMACION DE INICIALIZACION DEL PROGRAMA
+        public int casoEscogido;
         public Ventana_IniciarPedido()
         {
             InitializeComponent();
+            casoEscogido = 0;
         }
-
-        private void Ventana_IniciarPedido_FormClosed(object sender, FormClosedEventArgs e)
-        {            
-            Form1 ventanaPrincipal = new Form1();
-            ventanaPrincipal.Show();
-            this.Dispose();
-        }
-
+        
+        //PROGRAMACION DE BOTONES
         private void BtnCodigoCliente_Click(object sender, EventArgs e)
         {
-            Ventana_Cliente buscarCliente = new Ventana_Cliente(1);
-            buscarCliente.Show();
-            this.Dispose();
+            casoEscogido = 1;
+            this.Close();
         }
-
-        private void BtnCrearCliente_Click(object sender, EventArgs e)
+        //PROGRAMACION DE EVENTOS
+        private void Ventana_IniciarPedido_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Ventana_EditarCliente crearCliente = new Ventana_EditarCliente(1);
-            crearCliente.Show();
-            this.Dispose();
+            if(casoEscogido == 0)
+            {
+                Form1 ventanaPrincipal = new Form1();
+                ventanaPrincipal.Show();
+            }
+            if(casoEscogido == 1)
+            {
+                Ventana_Cliente buscarCliente = new Ventana_Cliente(1);
+                buscarCliente.Show();
+            }
         }
     }
 }

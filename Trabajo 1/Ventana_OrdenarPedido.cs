@@ -19,9 +19,8 @@ namespace Trabajo_1
 
         private void Ventana_OrdenarPedido_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Ventana_Cliente ventanaCliente = new Ventana_Cliente(1);
-            ventanaCliente.Show();
-            this.Dispose();
+            Form1 ventanaInicial = new Form1();
+            ventanaInicial.Show();
         }
     }
 }

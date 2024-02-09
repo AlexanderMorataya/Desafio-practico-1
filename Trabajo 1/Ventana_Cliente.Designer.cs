@@ -38,9 +38,9 @@
             this.LbEmail = new System.Windows.Forms.Label();
             this.LbNombre = new System.Windows.Forms.Label();
             this.LbCodigo = new System.Windows.Forms.Label();
-            this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.BtnConfirmarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,11 +86,9 @@
             this.panel1.Controls.Add(this.LbEmail);
             this.panel1.Controls.Add(this.LbNombre);
             this.panel1.Controls.Add(this.LbCodigo);
-            this.panel1.Controls.Add(this.BtnModificarCliente);
-            this.panel1.Controls.Add(this.BtnConfirmarCliente);
             this.panel1.Location = new System.Drawing.Point(58, 150);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 281);
+            this.panel1.Size = new System.Drawing.Size(741, 247);
             this.panel1.TabIndex = 5;
             // 
             // LbDireccion
@@ -153,21 +151,6 @@
             this.LbCodigo.TabIndex = 12;
             this.LbCodigo.Text = "Codigo: ";
             // 
-            // BtnModificarCliente
-            // 
-            this.BtnModificarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(213)))), ((int)(((byte)(248)))));
-            this.BtnModificarCliente.FlatAppearance.BorderSize = 0;
-            this.BtnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarCliente.ForeColor = System.Drawing.Color.Black;
-            this.BtnModificarCliente.Location = new System.Drawing.Point(623, 243);
-            this.BtnModificarCliente.Name = "BtnModificarCliente";
-            this.BtnModificarCliente.Size = new System.Drawing.Size(102, 26);
-            this.BtnModificarCliente.TabIndex = 11;
-            this.BtnModificarCliente.Text = "Modificar";
-            this.BtnModificarCliente.UseVisualStyleBackColor = false;
-            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
-            // 
             // BtnConfirmarCliente
             // 
             this.BtnConfirmarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(213)))), ((int)(((byte)(248)))));
@@ -175,9 +158,9 @@
             this.BtnConfirmarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfirmarCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfirmarCliente.ForeColor = System.Drawing.Color.Black;
-            this.BtnConfirmarCliente.Location = new System.Drawing.Point(480, 243);
+            this.BtnConfirmarCliente.Location = new System.Drawing.Point(519, 403);
             this.BtnConfirmarCliente.Name = "BtnConfirmarCliente";
-            this.BtnConfirmarCliente.Size = new System.Drawing.Size(137, 26);
+            this.BtnConfirmarCliente.Size = new System.Drawing.Size(146, 26);
             this.BtnConfirmarCliente.TabIndex = 10;
             this.BtnConfirmarCliente.Text = "Confirmar informacion";
             this.BtnConfirmarCliente.UseVisualStyleBackColor = false;
@@ -193,6 +176,21 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Ofertas del 50% por compras de mas de 5 productos de $20";
             // 
+            // BtnModificarCliente
+            // 
+            this.BtnModificarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(213)))), ((int)(((byte)(248)))));
+            this.BtnModificarCliente.FlatAppearance.BorderSize = 0;
+            this.BtnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificarCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificarCliente.ForeColor = System.Drawing.Color.Black;
+            this.BtnModificarCliente.Location = new System.Drawing.Point(671, 403);
+            this.BtnModificarCliente.Name = "BtnModificarCliente";
+            this.BtnModificarCliente.Size = new System.Drawing.Size(119, 26);
+            this.BtnModificarCliente.TabIndex = 11;
+            this.BtnModificarCliente.Text = "Modificar";
+            this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
+            // 
             // Ventana_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +202,8 @@
             this.Controls.Add(this.BtnBuscarCliente);
             this.Controls.Add(this.TxtCodigoCliente);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnConfirmarCliente);
+            this.Controls.Add(this.BtnModificarCliente);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Ventana_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -224,7 +224,6 @@
         private System.Windows.Forms.Button BtnBuscarCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button BtnModificarCliente;
         private System.Windows.Forms.Button BtnConfirmarCliente;
         private System.Windows.Forms.Label LbDireccion;
         private System.Windows.Forms.Label LbNombreContacto;
@@ -232,5 +231,6 @@
         private System.Windows.Forms.Label LbEmail;
         private System.Windows.Forms.Label LbNombre;
         private System.Windows.Forms.Label LbCodigo;
+        private System.Windows.Forms.Button BtnModificarCliente;
     }
 }
