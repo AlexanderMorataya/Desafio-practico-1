@@ -16,5 +16,11 @@ namespace Trabajo_1
         {
             InitializeComponent();
         }
+
+        private void Ventana_OrdenarPedido_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 ventanaInicial = new Form1();
+            ventanaInicial.Show();
+        }
     }
 }
