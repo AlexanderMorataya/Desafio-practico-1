@@ -33,7 +33,6 @@
             this.BtnBuscarCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LbDireccion = new System.Windows.Forms.Label();
-            this.LbNombreContacto = new System.Windows.Forms.Label();
             this.LbTelefono = new System.Windows.Forms.Label();
             this.LbEmail = new System.Windows.Forms.Label();
             this.LbNombre = new System.Windows.Forms.Label();
@@ -76,12 +75,12 @@
             this.BtnBuscarCliente.TabIndex = 4;
             this.BtnBuscarCliente.Text = "Buscar cliente";
             this.BtnBuscarCliente.UseVisualStyleBackColor = false;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.panel1.Controls.Add(this.LbDireccion);
-            this.panel1.Controls.Add(this.LbNombreContacto);
             this.panel1.Controls.Add(this.LbTelefono);
             this.panel1.Controls.Add(this.LbEmail);
             this.panel1.Controls.Add(this.LbNombre);
@@ -101,21 +100,11 @@
             this.LbDireccion.TabIndex = 17;
             this.LbDireccion.Text = "Direccion: ";
             // 
-            // LbNombreContacto
-            // 
-            this.LbNombreContacto.AutoSize = true;
-            this.LbNombreContacto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbNombreContacto.Location = new System.Drawing.Point(35, 130);
-            this.LbNombreContacto.Name = "LbNombreContacto";
-            this.LbNombreContacto.Size = new System.Drawing.Size(62, 19);
-            this.LbNombreContacto.TabIndex = 16;
-            this.LbNombreContacto.Text = "Contacto: ";
-            // 
             // LbTelefono
             // 
             this.LbTelefono.AutoSize = true;
             this.LbTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTelefono.Location = new System.Drawing.Point(35, 169);
+            this.LbTelefono.Location = new System.Drawing.Point(35, 133);
             this.LbTelefono.Name = "LbTelefono";
             this.LbTelefono.Size = new System.Drawing.Size(59, 19);
             this.LbTelefono.TabIndex = 15;
@@ -125,7 +114,7 @@
             // 
             this.LbEmail.AutoSize = true;
             this.LbEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbEmail.Location = new System.Drawing.Point(35, 205);
+            this.LbEmail.Location = new System.Drawing.Point(35, 169);
             this.LbEmail.Name = "LbEmail";
             this.LbEmail.Size = new System.Drawing.Size(45, 19);
             this.LbEmail.TabIndex = 14;
@@ -226,7 +215,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnConfirmarCliente;
         private System.Windows.Forms.Label LbDireccion;
-        private System.Windows.Forms.Label LbNombreContacto;
         private System.Windows.Forms.Label LbTelefono;
         private System.Windows.Forms.Label LbEmail;
         private System.Windows.Forms.Label LbNombre;

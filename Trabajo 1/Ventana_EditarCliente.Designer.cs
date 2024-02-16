@@ -34,14 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtDireccionCliente = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtContactoCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtEmailCliente = new System.Windows.Forms.TextBox();
             this.BtnEliminarCliente = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.LbTitulo = new System.Windows.Forms.Label();
+            this.LbCodigoCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnGuardarCambios
@@ -63,7 +63,7 @@
             this.TxtNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.TxtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtNombreCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombreCliente.Location = new System.Drawing.Point(329, 122);
+            this.TxtNombreCliente.Location = new System.Drawing.Point(329, 142);
             this.TxtNombreCliente.Name = "TxtNombreCliente";
             this.TxtNombreCliente.Size = new System.Drawing.Size(326, 27);
             this.TxtNombreCliente.TabIndex = 7;
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(195, 124);
+            this.label2.Location = new System.Drawing.Point(195, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 19);
             this.label2.TabIndex = 13;
@@ -92,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 166);
+            this.label3.Location = new System.Drawing.Point(195, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 19);
             this.label3.TabIndex = 15;
@@ -103,36 +103,16 @@
             this.TxtDireccionCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.TxtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtDireccionCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDireccionCliente.Location = new System.Drawing.Point(329, 164);
+            this.TxtDireccionCliente.Location = new System.Drawing.Point(329, 184);
             this.TxtDireccionCliente.Name = "TxtDireccionCliente";
             this.TxtDireccionCliente.Size = new System.Drawing.Size(326, 27);
             this.TxtDireccionCliente.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(195, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 19);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Nombre de contacto: ";
-            // 
-            // TxtContactoCliente
-            // 
-            this.TxtContactoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.TxtContactoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtContactoCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContactoCliente.Location = new System.Drawing.Point(329, 206);
-            this.TxtContactoCliente.Name = "TxtContactoCliente";
-            this.TxtContactoCliente.Size = new System.Drawing.Size(326, 27);
-            this.TxtContactoCliente.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(195, 250);
+            this.label5.Location = new System.Drawing.Point(195, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 19);
             this.label5.TabIndex = 19;
@@ -143,7 +123,7 @@
             this.TxtTelefonoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.TxtTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtTelefonoCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefonoCliente.Location = new System.Drawing.Point(329, 248);
+            this.TxtTelefonoCliente.Location = new System.Drawing.Point(329, 230);
             this.TxtTelefonoCliente.Name = "TxtTelefonoCliente";
             this.TxtTelefonoCliente.Size = new System.Drawing.Size(326, 27);
             this.TxtTelefonoCliente.TabIndex = 18;
@@ -152,7 +132,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(195, 295);
+            this.label6.Location = new System.Drawing.Point(195, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 21;
@@ -163,7 +143,7 @@
             this.TxtEmailCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.TxtEmailCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEmailCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmailCliente.Location = new System.Drawing.Point(329, 293);
+            this.TxtEmailCliente.Location = new System.Drawing.Point(329, 275);
             this.TxtEmailCliente.Name = "TxtEmailCliente";
             this.TxtEmailCliente.Size = new System.Drawing.Size(326, 27);
             this.TxtEmailCliente.TabIndex = 20;
@@ -192,20 +172,38 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "El negocio que tu comunidad necesita";
             // 
+            // LbTitulo
+            // 
+            this.LbTitulo.AutoSize = true;
+            this.LbTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTitulo.Location = new System.Drawing.Point(281, 92);
+            this.LbTitulo.Name = "LbTitulo";
+            this.LbTitulo.Size = new System.Drawing.Size(98, 19);
+            this.LbTitulo.TabIndex = 24;
+            this.LbTitulo.Text = "CODIGO CLIENTE: ";
+            // 
+            // LbCodigoCliente
+            // 
+            this.LbCodigoCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbCodigoCliente.Location = new System.Drawing.Point(385, 92);
+            this.LbCodigoCliente.Name = "LbCodigoCliente";
+            this.LbCodigoCliente.Size = new System.Drawing.Size(42, 19);
+            this.LbCodigoCliente.TabIndex = 25;
+            // 
             // Ventana_EditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(114)))));
             this.ClientSize = new System.Drawing.Size(850, 489);
+            this.Controls.Add(this.LbCodigoCliente);
+            this.Controls.Add(this.LbTitulo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnEliminarCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtEmailCliente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtTelefonoCliente);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.TxtContactoCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtDireccionCliente);
             this.Controls.Add(this.label2);
@@ -231,13 +229,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtDireccionCliente;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtContactoCliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtTelefonoCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtEmailCliente;
         private System.Windows.Forms.Button BtnEliminarCliente;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LbTitulo;
+        private System.Windows.Forms.Label LbCodigoCliente;
     }
 }

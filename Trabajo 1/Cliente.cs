@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_1
 {
-    class Cliente
+    public class Cliente
     {
         int codigoCliente;
         public int CodigoCliente

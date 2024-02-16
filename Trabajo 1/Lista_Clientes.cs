@@ -5,10 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabajo_1
+namespace Trabajo_1    
 {
+    //CLASE PARA COMPARTIR LA INSTANCIA/OBJETO DE LA LISTA CLIENTE
+    public static class ULC
+    {
+        public static Lista_Clientes lista_Clientes { get; set; } = new Lista_Clientes();
+    }
+
     //CLASE NODO QUE ALMACENARA LOS DATOS DE CADA CLIENTE
-    class Nodo
+    public class Nodo
     {
         public Cliente cliente;
         public Nodo siguiente;
@@ -20,7 +26,7 @@ namespace Trabajo_1
     }
 
     //CLASE QUE ALMACENARA A TODOS LOS CLIENTES
-    class Lista_Clientes
+    public class Lista_Clientes
     {
         public Nodo inicio;
         int totalnodos;
@@ -52,6 +58,7 @@ namespace Trabajo_1
                 auxiliar.cliente.CodigoCliente = puntero.cliente.CodigoCliente + 1;
                 puntero.siguiente = auxiliar;
             }
+            this.totalnodos++;
             return auxiliar.cliente.CodigoCliente;
         }
         //Metodo para eliminar cliente
@@ -79,6 +86,7 @@ namespace Trabajo_1
                 {
                     clienteAnt.siguiente = clientePos.siguiente;
                 }
+                this.totalnodos--;
             }
         }
         //Metodo para modificar cliente
