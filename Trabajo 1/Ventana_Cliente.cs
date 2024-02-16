@@ -13,6 +13,8 @@ namespace Trabajo_1
     public partial class Ventana_Cliente : Form
     {
         //PROGRAMACION DE INICIALIZACION DEL PROGRAMA
+        private int pos, codigo, telefono;
+        private string nombre, direccion, correo;        
         public int casoEscogido, casoPrevio;
         public Ventana_Cliente(int Caso)
         {
@@ -21,17 +23,59 @@ namespace Trabajo_1
         }
         private void Ventana_Cliente_Load(object sender, EventArgs e)
         {
-            if(casoEscogido == 0)
+            if (casoEscogido == 0)
             {
                 BtnConfirmarCliente.Visible = false;
+                BtnModificarCliente.Enabled = false;
             }
             if(casoEscogido == 1)
             {
                 BtnModificarCliente.Visible = false;
+                BtnConfirmarCliente.Enabled = false;
             }
         }
 
         //PROGRAMACION DE BOTONES
+        private void BtnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TxtCodigoCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un codigo para poder buscar al cliente");
+            }
+            else
+            {
+                pos = ULC.lista_Clientes.BuscarP(Convert.ToInt32(TxtCodigoCliente.Text));
+
+                if (pos > 0)
+                {
+                    Cliente datosCliente = ULC.lista_Clientes.buscarCliente(pos);
+                    codigo = datosCliente.CodigoCliente;
+                    nombre = datosCliente.NombreCliente;
+                    direccion = datosCliente.Direccion;
+                    correo = datosCliente.Correo;
+                    telefono = datosCliente.Telefono;
+
+                    LbCodigo.Text = "Codigo: " + codigo;
+                    LbNombre.Text = "Nombre: " + nombre;
+                    LbDireccion.Text = "Direccion: " + direccion;
+                    LbTelefono.Text = "Telefono: " + telefono;
+                    LbEmail.Text = "Email: " + correo;
+
+                    if (casoEscogido == 0)
+                    {
+                        BtnModificarCliente.Enabled = true;
+                    }
+                    if (casoEscogido == 1)
+                    {
+                        BtnConfirmarCliente.Enabled = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se ha encontrado ningun cliente asociado a ese codigo");
+                }
+            }
+        }
         private void BtnConfirmarCliente_Click(object sender, EventArgs e)
         {
             casoEscogido = 2;
@@ -69,6 +113,7 @@ namespace Trabajo_1
             if (casoEscogido == 3)
             {
                 Ventana_EditarCliente editarCliente = new Ventana_EditarCliente(1);
+                editarCliente.SetDatos(pos, codigo, nombre, direccion, correo, telefono);
                 editarCliente.Show();
             }
         }

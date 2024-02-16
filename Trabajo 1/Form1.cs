@@ -16,6 +16,18 @@ namespace Trabajo_1
         public Form1()
         {
             InitializeComponent();
+            Cliente cliente1 = new Cliente { NombreCliente = "Cliente 1", Direccion = "Dirección 1", Telefono = 123456789, Correo = "cliente1@example.com" };
+            Cliente cliente2 = new Cliente { NombreCliente = "Cliente 2", Direccion = "Dirección 2", Telefono = 987654321, Correo = "cliente2@example.com" };
+            Cliente cliente3 = new Cliente { NombreCliente = "Cliente 3", Direccion = "Dirección 3", Telefono = 555555555, Correo = "cliente3@example.com" };
+            Cliente cliente4 = new Cliente { NombreCliente = "Cliente 4", Direccion = "Dirección 4", Telefono = 111111111, Correo = "cliente4@example.com" };
+            Cliente cliente5 = new Cliente { NombreCliente = "Cliente 5", Direccion = "Dirección 5", Telefono = 999999999, Correo = "cliente5@example.com" };
+            Cliente cliente6 = new Cliente { NombreCliente = "Cliente 6", Direccion = "Dirección 6", Telefono = 222222222, Correo = "cliente6@example.com" };
+            ULC.lista_Clientes.InsertarF(cliente1);
+            ULC.lista_Clientes.InsertarF(cliente2);
+            ULC.lista_Clientes.InsertarF(cliente3);
+            ULC.lista_Clientes.InsertarF(cliente4);
+            ULC.lista_Clientes.InsertarF(cliente5);
+            ULC.lista_Clientes.InsertarF(cliente6);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
