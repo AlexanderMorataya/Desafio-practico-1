@@ -31,7 +31,7 @@ namespace Trabajo_1
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ImprimirPedidos();
         }
 
         //PROGRAMACION DE BOTONES
@@ -55,9 +55,23 @@ namespace Trabajo_1
         }
         private void BtnFacturarPedido_Click(object sender, EventArgs e)
         {
-            Ventana_FacturarPedido facturarPedido = new Ventana_FacturarPedido();
-            facturarPedido.Show();
-            this.Hide();
+            if (UCP.cola_Pedidos.ColaVacia())
+            {
+                MessageBox.Show("No hay ningun pedido en cola");
+            }
+            else
+            {
+                Ventana_FacturarPedido facturarPedido = new Ventana_FacturarPedido();
+                facturarPedido.Show();
+                this.Hide();
+            }            
+        }
+
+        //METODOS UTILIZADOS POR EL PROGRAMA
+        private void ImprimirPedidos()
+        {
+            DgvInformacionPedidos.DataSource = null;
+            DgvInformacionPedidos.DataSource = UCP.cola_Pedidos.informacionPedidos();
         }
 
         //PROGRAMACION DE EVENTOS

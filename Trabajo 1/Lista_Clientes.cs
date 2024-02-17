@@ -144,25 +144,5 @@ namespace Trabajo_1
                 return null;
             }
         }
-        //Metodo para mostrar la lista de clientes
-        public DataTable informacionClientes()
-        {
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("CodigoCliente", typeof(int));
-            dataTable.Columns.Add("NombreCliente", typeof(string));
-            dataTable.Columns.Add("Direccion", typeof(string));
-            dataTable.Columns.Add("Telefono", typeof(int));
-            dataTable.Columns.Add("Correo", typeof(string));
-
-            Nodo puntero = inicio;
-            while (puntero != null)
-            {
-                Cliente cliente = puntero.cliente;
-                dataTable.Rows.Add(cliente.CodigoCliente, cliente.NombreCliente, cliente.Direccion, cliente.Telefono, cliente.Correo);
-                puntero = puntero.siguiente;
-            }
-
-            return dataTable;
-        }
     }
 }

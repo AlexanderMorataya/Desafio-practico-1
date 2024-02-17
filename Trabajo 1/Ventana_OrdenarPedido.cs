@@ -59,7 +59,7 @@ namespace Trabajo_1
             producto.CodigoProducto = codigoProducto;
             producto.NombreProducto = CbProductos.SelectedItem.ToString();
             producto.Unidades = (int)CbUnidades.Value;
-            producto.PrecioUnidad = precio * (int)CbUnidades.Value;
+            producto.PrecioUnidad = Math.Round(precio * (int)CbUnidades.Value, 2);
             producto.Descripcion = descripcion;
 
             Productos.InsertarF(producto);
@@ -74,7 +74,25 @@ namespace Trabajo_1
         //Boton para ingresar todos los datos del pedido
         private void BtnConfirmarPedido_Click(object sender, EventArgs e)
         {
+            if (Productos.ColaVacia())
+            {
+                MessageBox.Show("Debe escoger al menos un producto para realizar un pedido");
+            }
+            else
+            {
+                Pedido pedido = new Pedido();
+                pedido.CodigoCliente = codigoCliente;
+                pedido.Cola_Productos = Productos;
+                pedido.PrecioTotal = Math.Round(Suma, 2);
+                pedido.Iva = Math.Round(Iva, 2);
+                pedido.PrecioFinal = Math.Round(Total,2);
+                pedido.FechaPedido = DateTime.Now;
 
+                UCP.cola_Pedidos.IngresarPedido(pedido);
+
+                MessageBox.Show("Su pedido a sido guardado exitosamente");
+                this.Close();
+            }
         }
 
         //PROGRAMACION DE EVENTOS
@@ -115,9 +133,9 @@ namespace Trabajo_1
             Iva = Math.Round(Productos.PrecioTotalProductos() * 0.13, 2);
             Total = Suma + Iva;
 
-            LbSumaTotal.Text = Suma.ToString();
-            lbIva.Text = Iva.ToString();
-            LbPagoTotal.Text = Total.ToString();
+            LbSumaTotal.Text = "$" + Suma.ToString();
+            lbIva.Text = "$" + Iva.ToString();
+            LbPagoTotal.Text = "$" + Total.ToString();
         }
         //Metodos para cargar los datos del cliente
         public void SetDatos(int cod, string nom)
@@ -126,4 +144,6 @@ namespace Trabajo_1
             this.nombreCliente = nom;
         }
     }
+
+
 }
