@@ -11,11 +11,12 @@ using System.Windows.Forms;
 namespace Trabajo_1
 {
     public partial class Ventana_Cliente : Form
-    {
-        //PROGRAMACION DE INICIALIZACION DEL PROGRAMA
+    {        
         private int pos, codigo, telefono;
         private string nombre, direccion, correo;        
         public int casoEscogido, casoPrevio;
+
+        //PROGRAMACION DE INICIALIZACION DEL PROGRAMA
         public Ventana_Cliente(int Caso)
         {
             InitializeComponent();
@@ -55,11 +56,11 @@ namespace Trabajo_1
                     correo = datosCliente.Correo;
                     telefono = datosCliente.Telefono;
 
-                    LbCodigo.Text = "Codigo: " + codigo;
-                    LbNombre.Text = "Nombre: " + nombre;
-                    LbDireccion.Text = "Direccion: " + direccion;
-                    LbTelefono.Text = "Telefono: " + telefono;
-                    LbEmail.Text = "Email: " + correo;
+                    LbCodigo.Text = codigo.ToString();
+                    LbNombre.Text = nombre;
+                    LbDireccion.Text = direccion;
+                    LbTelefono.Text = telefono.ToString();
+                    LbEmail.Text = correo;
 
                     if (casoEscogido == 0)
                     {
@@ -107,6 +108,7 @@ namespace Trabajo_1
             if (casoEscogido == 2)
             {
                 Ventana_OrdenarPedido ordenarPedido = new Ventana_OrdenarPedido();
+                ordenarPedido.SetDatos(codigo, nombre);
                 ordenarPedido.Show();
             }
             //Si decide modificar cliente
