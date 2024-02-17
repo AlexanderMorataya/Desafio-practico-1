@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_1
 {
-    class Producto
+    public class Producto
     {
         int codigoProducto;
         public int CodigoProducto
@@ -20,6 +20,13 @@ namespace Trabajo_1
         {
             get { return nombreProducto; }
             set { nombreProducto = value; }
+        }
+
+        int unidades;
+        public int Unidades
+        {
+            get { return unidades; }
+            set { unidades = value; }
         }
 
         double precioUnidad;
