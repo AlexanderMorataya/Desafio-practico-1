@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
+using System.Linq;  
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -137,5 +137,12 @@ namespace Trabajo_1
             }
             return total;
         }
+        //Metodo para revisar si la cola productos esta vacia
+        public bool ColaVacia()
+        {
+            return inicio == null;
+        }
     }
+
+
 }
